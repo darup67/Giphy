@@ -1,7 +1,7 @@
-$(document).ready(function () {
-    var movies = ["moulin rouge", "clueless", "mean girls", "drop dead fred", "breakfast at tiffanys", "cruel intentions", "donnie darko", "a night at the roxbury"];
+$(document).ready(function() {
+    var movies = ["Batman", "Rugrats", "Titanic", "House of the Dead", "Resident Evil", "Bird Box", "Superman", "The Godfather"];
 
-    // Add buttons for original movies array
+
     function renderButtons() {
         $("#movie-buttons").empty();
         for (i = 0; i < movies.length; i++) {
@@ -11,8 +11,8 @@ $(document).ready(function () {
 
     renderButtons();
 
-    // Adding a button for movie entered
-    $("#add-movie").on("click", function () {
+
+    $("#add-movie").on("click", function() {
         event.preventDefault();
         var movie = $("#movie-input").val().trim();
         movies.push(movie);
@@ -21,16 +21,16 @@ $(document).ready(function () {
     });
 
 
-    // Getting gifs from api... onto html
-    $("button").on("click", function () {
+
+    $("button").on("click", function() {
         var movie = $(this).attr("data-movie");
         var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-            movie + "&api_key=dc6zaTOxFJmzC&limit=10"
+            movie + "znQKIOIcjJLtZj9d75cy6mBwCIEWy4O6"
 
         $.ajax({
             url: queryURL,
             method: "GET"
-        }).done(function (response) {
+        }).done(function(response) {
             var results = response.data;
             $("#movies").empty();
             for (var i = 0; i < results.length; i++) {
@@ -58,24 +58,11 @@ $(document).ready(function () {
         if (state == "still") {
             $(this).attr("src", animateImage);
             $(this).attr("data-state", "animate");
-        }
-
-        else if (state == "animate") {
+        } else if (state == "animate") {
             $(this).attr("src", stillImage);
             $(this).attr("data-state", "still");
         }
     }
-
-    // $("img").on("click", function() {
-    // 	console.log("click worked!");
-    // 	var src = movieImg.attr(src);
-    // 	src = src.substring(0, src.length - 10);
-    // 	src += ".url";
-    // 	console.log(src);
-    // 	movieImg.attr("src", src);
-    // });
-
-    // $(document).on("click", "#input", displayImg);
     $(document).on("click", ".gif", changeState);
 
 });
