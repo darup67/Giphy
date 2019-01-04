@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var movies = ["Batman", "Rugrats", "Titanic", "House of the Dead", "Resident Evil", "Bird Box", "Superman", "The Godfather"];
+    var movies = ["Suicide Squad", "Rugrats", "Titanic", "House of the Dead", "Resident Evil", "Bird Box", "Superman", "The Godfather"];
 
 
     function renderButtons() {
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
     $("button").on("click", function() {
         var movie = $(this).attr("data-movie");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
+        var queryURL = "https://api.giphy.com/v1/gifs/search" +
             movie + "znQKIOIcjJLtZj9d75cy6mBwCIEWy4O6"
 
         $.ajax({
