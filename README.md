@@ -1,4 +1,4 @@
-# Giphy
+# Giphy :fireworks: :tv:
 
 # Overview
 
