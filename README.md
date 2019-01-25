@@ -4,7 +4,7 @@
 
 This app uses the GIPHY API to make a dynamic web page that populates with gifs of your choice. You create a button with a name of anythng you wish - amnimal, person, whatever. It just gets 10 images from GIPHY and displays them with their rating. The initial display of the image is static. When you click an image, it animates. When you click it again, it goes back to static. It is mobile responsive as well.
 
-Specifics
+# Specifics
 When the user clicks on a button, the page grabs 10 static, non-animated gif images from the GIPHY API and place them on the page.
 
 When the user clicks one of the still GIPHY images, the gif animates. If the user clicks the gif again, it stops playing.
