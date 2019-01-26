@@ -1,6 +1,6 @@
 # Giphy :fireworks: :tv:
 
-# Overview
+# Overview :clapper:
 
 This app uses the GIPHY API to make a dynamic web page that populates with gifs of your choice. You create a button with a name of anythng you wish - amnimal, person, whatever. It just gets 25 images from GIPHY and displays them with their rating. The initial display of the image is static. When you click an image, it animates. When you click it again, it goes back to static. It is mobile responsive as well.
 
